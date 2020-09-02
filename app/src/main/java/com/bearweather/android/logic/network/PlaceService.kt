@@ -1,6 +1,5 @@
 package com.bearweather.android.logic.network
 
-
 import com.bearweather.android.BearWeatherApplication
 import com.bearweather.android.logic.model.PlaceResponse
 import retrofit2.Call

@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.bearweather.android.logic.Repository
+import com.bearweather.android.logic.dao.PlaceDao
 import com.bearweather.android.logic.model.Place
 import java.util.ArrayList
 
@@ -16,4 +17,7 @@ class PlaceViewModel: ViewModel() {
     fun searchPlaces(query:String){
         searchLiveData.value=query
     }
+    fun savePlace(place: Place)= Repository.savePlace(place)
+    fun getSavedPlace() = Repository.getSavedPlace()
+    fun isPlaceSaved()=Repository.isPlaceSaved()
 }
